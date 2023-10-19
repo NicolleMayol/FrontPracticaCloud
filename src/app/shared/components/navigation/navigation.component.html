@@ -1,0 +1,66 @@
+<!-- <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === false">
+      <mat-toolbar>Menu</mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item href="#">Link 1</a>
+        <a mat-list-item href="#">Link 2</a>
+        <a mat-list-item href="#">Link 3</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>ecommerce</span>
+      </mat-toolbar>
+
+      <span>ecommerce</span>
+      <span>ecommerce</span>
+    </mat-sidenav-content>
+  </mat-sidenav-container> -->
+
+  <mat-sidenav-container class="sidenav-container bg-main">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport>
+      <mat-toolbar class="color-white">Menu</mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item href="#">Home</a>
+        <a mat-list-item (click)="scrollTo('aboutSection')">About me</a>
+                <a mat-list-item (click)="scrollTo('contactSection')">Contact</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar class="bg-main" color="primary">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+
+        <mat-list-item style="width:100%;text-align: center;" *ngIf="isHandsetMatList$ | async">
+          <a  href="#">Home</a>
+
+          <a (click)="scrollTo('aboutSection')">About me</a>
+          <a (click)="scrollTo('experienceSection')">Experience</a>
+          <a (click)="scrollTo('skillSection')">Skill</a>
+          <a (click)="scrollTo('portfolioSection')">Portfolio</a>
+          <a (click)="scrollTo('contactSection')">Contact</a>
+        </mat-list-item>
+      </mat-toolbar>
+
+      <router-outlet></router-outlet>
+
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
