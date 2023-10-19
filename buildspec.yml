@@ -1,0 +1,34 @@
+version: 0.2
+
+phases:
+
+  install:
+    on-failure: ABORT
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - npm install
+      - npm install -g @angular/cli
+
+  pre_build:
+    on-failure: ABORT
+    commands:
+      - echo Building version ${CODEBUILD_BUILD_NUMBER}
+      - APP_NAME=$(jq -r '.name' package.json)
+      - echo "The application name from package.json is ${APP_NAME}"
+
+  build:
+    on-failure: ABORT
+    commands:
+      - ng build
+
+  post_build:
+    on-failure: ABORT
+    commands:
+      - "echo Build finished"
+
+artifacts:
+  files:
+    - "**/*"
+  base-directory: 'dist/${APP_NAME}'
+  discard-paths: no
