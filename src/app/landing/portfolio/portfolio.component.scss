@@ -1,0 +1,74 @@
+.title-color{
+    color: #0891B2;
+}
+.color-white{
+    color: white;
+}
+
+.w-100 {
+    width: 100%!important;
+  }
+  
+  .container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+  
+  .cards {
+    width: calc(100% - 50px);
+    overflow: hidden;
+  }
+  
+  .overflow {
+    position: relative;
+    transition: left 0.5s ease-in-out;
+  }
+  
+  .card {
+    height: 300px;
+    background-color: #e0e1e2;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+  }
+  
+  .no-right-margin {
+    margin-right: 0px;
+  }
+  
+  .card span {
+    font-size:48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .left,
+  .right {
+    height: 20px;
+    width: 20px;
+    //background-color: #0072bc;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    right: 0;
+  }
+  
+
+.white-icon {
+    color: white;
+}
+/* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
+.white-icon svg {
+    fill: white;
+}
