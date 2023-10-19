@@ -1,0 +1,45 @@
+.bg_mat_grid_list{
+  background: rgb(238, 244, 250);
+}
+
+mat-grid-tile{
+  background: none;
+  //padding-top: 600px!Important;
+}
+
+mat-grid-list{
+  background: none;
+  //margin-bottom: 15px;
+}
+
+.example-card {
+  margin: 15px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.container {
+  max-width: 1200px; 
+  margin-inline: auto;
+}
+
+body { 
+  height: 100%;
+  background-color: #0F1731!Important;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 0.5 rem solid #ffffff;
+}
+
+.p-15{
+  padding: 15px;
+}
+
+.mh{
+  margin: 0px 15px;
+}
