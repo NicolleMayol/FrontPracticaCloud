@@ -1,0 +1,44 @@
+.title-color{
+    color: #0891B2;
+}
+.color-white{
+    color: white;
+}
+/*
+.example-container{
+    margin: 16px;
+    background-color: #1E293B;
+  }
+
+  
+
+  .mat-label{
+    color: aliceblue;
+  }
+  mat-form-field mat-label{
+    color: aliceblue;
+  }
+  mat-form-field input, textarea{
+    background-color: rgb(218, 218, 218);
+  }*/
+
+  // Center content vertically and horizontally:
+
+
+.example-container{
+    margin: 16px;
+    padding: 32px;
+    background-color: aliceblue;
+}  
+
+// Display content in a column
+.wrapper{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.wrapper button{
+    width: 200px; 
+}

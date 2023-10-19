@@ -1,0 +1,26 @@
+<mat-list id="contactSection">
+    <mat-list-item>
+        <span class="title-color headline-1"><h1>Contact me</h1></span>
+    </mat-list-item>
+
+</mat-list>
+
+<div class="example-container">
+    <div class="wrapper">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="example@example.com" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Textarea</mat-label>
+            <textarea matInput></textarea>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" >Enviar</button>
+</div>
+</div>
