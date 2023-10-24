@@ -1,11 +1,18 @@
 <mat-list id="aboutSection">
-    <mat-list-item>
-        <span class="title-color headline-1"><h1>About me</h1></span>
-    </mat-list-item>
-    <br>
-    <mat-list-item style="height:auto" class="color-white">
-        <div matListItemLine>Hello! This is Manuela's and Nicolle's landing page.
-            <br> <h1> PRUEBA INTEGRACIÓN</h1>
-        </div>
-    </mat-list-item>
+  <mat-list-item>
+      <span class="title-color headline-1"><h1>About me</h1></span>
+  </mat-list-item>
+  <br>
+  <mat-list-item style="height:auto" class="color-white">
+      <div matListItemLine>Hello! This is Manuela's and Nicolle's landing page.
+          <br> <h1> PRUEBA INTEGRACIÓN</h1>
+      </div>
+  </mat-list-item>
+  <mat-list-item *ngFor="let user of users"> <!-- Use *ngFor to iterate over users -->
+      <div matListItemLine>
+          <h3>{{ user.name }}</h3> <!-- Display the user's name -->
+          <p>Skills: {{ user.Skills.join(', ') }}</p> <!-- Display the user's skills -->
+          <p>Favorite Hobby: {{ user.favorite_hobby }}</p> <!-- Display the user's favorite hobby -->
+      </div>
+  </mat-list-item>
 </mat-list>
